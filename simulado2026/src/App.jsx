@@ -1,11 +1,51 @@
 import { useState } from 'react'
-import './App.css'
+import { dadosClima } from './DadosClima'
+import { codigosWmo } from './CodigosWmo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [busca, setBusca] = useState('')
+  const [cidade, setCidade] = useState(null)
+
+  function buscar() {
+    const resultado = dadosClima.find(
+      item => item.name.toLowerCase() === busca.toLowerCase()
+    )
+
+    setCidade(resultado)
+  }
 
   return (
-    a
+    <div>
+      <img src="./src/assets/icons/solchuva.svg" alt="" />
+      <h1>Sol Chuva</h1>
+
+      <input
+        value={busca}
+        onChange={e => setBusca(e.target.value)}
+        placeholder="Digite o nome de uma cidade..."
+      />
+
+      <h2>Pesquise por: Florianopolis, São Paulo ou Rio de Janeiro</h2>
+
+      <button onClick={buscar}>Buscar</button>
+
+      <hr />
+
+      {cidade && (
+        <div>
+          <h2>{cidade.name}</h2>
+          <p>{cidade.current.time}</p>
+          <p>{cidade.current.temperature_2m} °C</p>
+          <p>{cidade.current.apparent_temperature} °C (sensação térmica)</p>
+          <p>{cidade.current.wind_speed_10m} km/h de vento</p>
+          <p>{cidade.current.relative_humidity_2m}% de umidade</p>
+          <p>{cidade.current.precipitation} mm de precipitação</p>
+          <p>{cidade.current.uv_index} índice UV</p>
+          <p>{cidade.current.sunrise} Nascer do sol</p>
+          <p>{cidade.current.sunset} Pôr do sol</p>                
+        </div>
+      )}
+    </div>
   )
 }
 
