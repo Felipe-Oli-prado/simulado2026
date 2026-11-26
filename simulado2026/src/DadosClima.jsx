@@ -94,6 +94,38 @@ export const dadosClima = [
       { date: "2026-12-03", weather_code: 1, temperature_2m_max: 35, temperature_2m_min: 26, precipitation_probability_max: 10 },
       { date: "2026-12-04", weather_code: 80, temperature_2m_max: 31, temperature_2m_min: 24, precipitation_probability_max: 70 }
     ]
+  },
+  {
+    id: 4,
+    name: "Londrina",
+    admin1: "Paraná",
+    country: "Brasil",
+    latitude: -23.31,
+    longitude: -51.16,
+    current: {
+      time: "2026-11-25T14:00",
+      temperature_2m: 29,
+      apparent_temperature: 31,
+      relative_humidity_2m: 62,
+      wind_speed_10m: 14,
+      precipitation: 0,
+      weather_code: 1,
+      uv_index: 8.5,
+      sunrise: "05:31",
+      sunset: "18:55"
+    },
+    daily: [
+      { date: "2026-11-25", weather_code: 1, temperature_2m_max: 31, temperature_2m_min: 20, precipitation_probability_max: 10 },
+      { date: "2026-11-26", weather_code: 2, temperature_2m_max: 30, temperature_2m_min: 19, precipitation_probability_max: 20 },
+      { date: "2026-11-27", weather_code: 80, temperature_2m_max: 27, temperature_2m_min: 18, precipitation_probability_max: 75 },
+      { date: "2026-11-28", weather_code: 61, temperature_2m_max: 25, temperature_2m_min: 17, precipitation_probability_max: 85 },
+      { date: "2026-11-29", weather_code: 3, temperature_2m_max: 26, temperature_2m_min: 17, precipitation_probability_max: 30 },
+      { date: "2026-11-30", weather_code: 2, temperature_2m_max: 28, temperature_2m_min: 18, precipitation_probability_max: 15 },
+      { date: "2026-12-01", weather_code: 0, temperature_2m_max: 31, temperature_2m_min: 20, precipitation_probability_max: 5 },
+      { date: "2026-12-02", weather_code: 0, temperature_2m_max: 32, temperature_2m_min: 21, precipitation_probability_max: 5 },
+      { date: "2026-12-03", weather_code: 95, temperature_2m_max: 28, temperature_2m_min: 19, precipitation_probability_max: 90 },
+      { date: "2026-12-04", weather_code: 2, temperature_2m_max: 29, temperature_2m_min: 19, precipitation_probability_max: 20 }
+    ]
   }
 ]
 
