@@ -1,17 +1,179 @@
-.app{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333333;
+  height: 100vh;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.pagina {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cabecalho {
+  display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.primeira{
-  width: 100%;
+.cabecalho img {
+  width: 36px;
+  height: 36px;
+}
+
+.cabecalho h1 {
+  color: #333333;
+  font-size: 22px;
+}
+
+.area-busca {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  gap: 8px;
+}
+
+.area-busca input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.area-busca button {
+  background-color: #483DAD;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.aviso {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chips button {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.chips button:hover {
+  border-color: #483DAD;
+  color: #483DAD;
+}
+
+.resultado {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 0;
+}
+
+.card-atual {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.local {
+  color: #666666;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.temperatura-atual {
+  display: flex;
   align-items: center;
   gap: 10px;
+}
 
+.temperatura-atual .icone {
+  font-size: 32px;
+}
+
+.temperatura-atual .graus {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 16px;
+  font-size: 13px;
+}
+
+.indicadores p {
+  background-color: #f9f9f9;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #eeeeee;
+}
+
+.resultado h3 {
+  font-size: 15px;
+  color: #333333;
+}
+
+.grade-dias {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+}
+
+.card-dia {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.icone-dia {
+  font-size: 22px;
+}
+
+.chuva {
+  color: #483DAD;
+  font-weight: bold;
+  font-size: 11px;
 }
